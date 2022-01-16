@@ -14,6 +14,14 @@ require('packer').startup(function()
     use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
+    -- 主题
+    use 'morhetz/gruvbox'
+    -- 状态栏插件
+    use {
+        'romgrk/barbar.nvim',
+        requires = {'kyazdani42/nvim-web-devicons'}
+    }
+    use 'vim-airline/vim-airline' -- 顶部状态栏
 end)
 
 -- Add additional capabilities supported by nvim-cmp
@@ -23,7 +31,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'denols','gopls'}
+local servers = { 'tsserver','gopls'}
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         -- on_attach = my_custom_on_attach,
