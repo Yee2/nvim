@@ -17,10 +17,31 @@ neovim 配置
 ```sh
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
- ```
+```
 
 第一次打开需要同步插件，需要执行命令：
 
 ```vim
 :PackerSync
 ```
+
+### coc.nvim
+
+绑定快捷键：
+
+| 快捷键        | 实现                             | 说明               |
+| ------------- | -------------------------------- | ------------------ |
+| `gd`          | `<Plug>(coc-definition)`         | 跳转到定义         |
+| `gi`          | `<Plug>(coc-implementation)`     | 跳转到实现         |
+| `gy`          | `<Plug>(coc-type-definition)`    | 跳转到类型定义     |
+| `gr`          | `<Plug>(coc-references)`         | 跳转到引用         |
+| `<leader>q`   | `<Plug>(coc-codeaction-cursor)`  | 显示可执行代码操作 |
+| `<leader>fix` | `<Plug>(coc-fix-current)`        | 快速修复           |
+| `K`           | `call CocActionAsync('doHover')` | 显示文档           |
+| `Ctrl+Alt+l`  | `call CocActionAsync('format')`  | 格式化代码         |
+
+扩展插件：
+
+- `coc-rls` Rust 语言支持
+- `coc-clangd` C 语言支持
+- `coc-pairs ` 自动补全括号
