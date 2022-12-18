@@ -3,6 +3,8 @@ return function(packer)
     packer {'neoclide/coc.nvim', branch = 'release'}
     vim.cmd([[ inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>" ]])
     keyset("n", "<leader>q", "<Plug>(coc-codeaction-cursor)", {silent = true})
+    keyset("n", "<leader>[", "<Plug>(coc-diagnostic-prev)", {silent = true})
+    keyset("n", "<leader>]", "<Plug>(coc-diagnostic-next)", {silent = true})
     keyset("n", "<leader>fix", "<Plug>(coc-fix-current)", {silent = true})
     keyset("n", "<C-A-l>", ":call CocActionAsync('format')<CR>", {silent = true})
 

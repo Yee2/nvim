@@ -27,6 +27,15 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 ### coc.nvim
 
+`coc.nvim` 在补全部分已经内置了一些快捷键：
+
+| 按键              | 动作           |
+| ----------------- | -------------- |
+| `Ctrl-n` / `Up`   | 选择上一个补全 |
+| `Ctrl-p` / `Down` | 选择下一个补全 |
+| `Ctrl-e`          | 关闭补全提示框 |
+| `Ctrl-y`          | 输入选中       |
+
 绑定快捷键：
 
 | 快捷键        | 实现                             | 说明               |
