@@ -54,3 +54,4 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 - `coc-rls` Rust 语言支持
 - `coc-clangd` C 语言支持
 - `coc-pairs ` 自动补全括号
+- `coc-tsserver` JS/TS 语言支持
