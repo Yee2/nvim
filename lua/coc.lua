@@ -1,6 +1,5 @@
-return function(packer)
+return {'neoclide/coc.nvim', branch = 'release', config = function(packer)
     local keyset = vim.keymap.set
-    packer {'neoclide/coc.nvim', branch = 'release'}
     vim.cmd([[ inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>" ]])
     keyset("n", "<leader>q", "<Plug>(coc-codeaction-cursor)", {silent = true})
     keyset("n", "<leader>[", "<Plug>(coc-diagnostic-prev)", {silent = true})
@@ -26,3 +25,4 @@ return function(packer)
     end
     keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', {silent = true})
 end
+}

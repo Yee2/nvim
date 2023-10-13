@@ -10,21 +10,6 @@ neovim 配置
 - 主题使用 [morhetz/gruvbox](https://github.com/morhetz/gruvbox)
 - 代码补全使用 [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)
 
-## 安装 packer
-
-插件管理使用 [packer.nvim](https://github.com/wbthomason/packer.nvim)，如果原先没有的话需要先安装插件管理器：
-
-```sh
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
-第一次打开需要同步插件，需要执行命令：
-
-```vim
-:PackerSync
-```
-
 ### coc.nvim
 
 `coc.nvim` 在补全部分已经内置了一些快捷键：
@@ -53,5 +38,5 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 - `coc-rls` Rust 语言支持
 - `coc-clangd` C 语言支持
-- `coc-pairs ` 自动补全括号
 - `coc-tsserver` JS/TS 语言支持
+- `coc-go` Go 语言支持

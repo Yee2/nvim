@@ -1,7 +1,15 @@
-require("config")
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
 
-require('packer').startup(function(p)
-    use 'wbthomason/packer.nvim'
-    require("theme")(p)
-    require("coc")(p)
-end)
+require("config")
+require("lazy").setup( {require("theme"), require("coc")})
