@@ -12,4 +12,4 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("config")
-require("lazy").setup( {require("theme"), require("coc")})
+require("lazy").setup( {require("theme"), require("coc"), require("wk")})
